@@ -74,6 +74,14 @@
   .awards li:last-child{border-bottom:none}
   .awards .yr{color:var(--muted);white-space:nowrap;font-size:.9rem}
 
+  .media-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .media{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .media video,.media img,.media iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000;object-fit:contain}
+  .media .cap{padding:12px 14px}
+  .media .cap h3{font-size:1rem;margin:0 0 4px;font-family:Inter,sans-serif}
+  .media .cap p{margin:0;color:var(--muted);font-size:.9rem}
+  @media (max-width:720px){.media-grid{grid-template-columns:1fr}}
+
   footer{padding:36px 0;color:var(--muted);font-size:.88rem;text-align:center}
 
   @media (max-width:720px){
@@ -96,6 +104,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
+      <li><a href="#media">Media</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#awards">Awards</a></li>
@@ -110,7 +119,7 @@
     <div>
       <h1>Saqib Ahmad Zargar</h1>
       <p class="role">PhD Candidate · Department of Civil Engineering · Indian Institute of Technology Madras</p>
-      <p class="lede">I study how light-absorbing particles, especially Brown Carbon,mineral dust and black carbon, darken Himalayan snow and accelerate melt, using field observations, imaging spectroscopy and radiative-transfer modelling.</p>
+      <p class="lede">I study how light-absorbing particles, especially mineral dust, darken Himalayan snow and accelerate melt, using field observations, imaging spectroscopy and radiative-transfer modelling.</p>
       <div class="links">
         <a class="btn primary" href="assets/Saqib_Zargar_CV.pdf" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm-1 7V3.5L18.5 9zM8 13h8v2H8zm0 4h8v2H8z"/></svg>CV (PDF)</a>
@@ -189,6 +198,43 @@
     <div class="card"><h3>FMI, Finland</h3><p>2023–present · Brown carbon absorption in snow.</p></div>
     <div class="card"><h3>CryoScope (Indo-European)</h3><p>2024–present · AWS installation and lake-discharge monitoring in Himalayan glacier catchments.</p></div>
     <div class="card"><h3>HailSafe Orchards</h3><p>2026 · Startup selected for incubation at Nirmaan, IIT Madras. Uses WRF-based, orchard-scale hail forecasts to trigger automatic hail nets.</p></div>
+  </div>
+</section>
+
+<section id="media">
+  <h2>Media</h2>
+  <div class="media-grid">
+
+    <!-- ===== VIDEO stored in your repo (MP4, under 25 MB) =====
+         Upload the file to assets/media/ and change the filename below. -->
+    <div class="media">
+      <video src="assets/media/video1.mp4" controls muted playsinline preload="metadata"></video>
+      <div class="cap">
+        <h3>Title of video 1</h3>
+        <p>One-line description, e.g. EMIT dust-on-snow retrieval over Sinthan Pass.</p>
+      </div>
+    </div>
+
+    <!-- ===== ANIMATION (GIF) stored in your repo ===== -->
+    <div class="media">
+      <img src="assets/media/animation1.gif" alt="Animation 1" loading="lazy">
+      <div class="cap">
+        <h3>Title of animation 1</h3>
+        <p>One-line description, e.g. WRF-Chem dust deposition, March 2024.</p>
+      </div>
+    </div>
+
+    <!-- ===== YOUTUBE video (for large files) — copy this block, remove the
+         comment markers, and replace VIDEO_ID with the code after "v=" in the YouTube link.
+    <div class="media">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen loading="lazy"></iframe>
+      <div class="cap">
+        <h3>Title</h3>
+        <p>Description.</p>
+      </div>
+    </div>
+    -->
+
   </div>
 </section>
 
